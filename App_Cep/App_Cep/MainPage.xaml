@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App_Cep"
+             x:Class="App_Cep.MainPage">
+
+    <StackLayout BackgroundColor="#FFBF00" Padding="30" Spacing="30">
+        <Image Source="Logo.png"></Image>
+        <Entry x:Name="CEP" Keyboard="Numeric" Placeholder="Digite o CEP" PlaceholderColor="#FFBF00" BackgroundColor="#FFF"></Entry>
+        <Button x:Name="BOTAOCEP" Clicked="BuscarCep" Text="Buscar Endereço"  TextColor="#FFF" BackgroundColor="#004168"></Button>
+
+        <ActivityIndicator x:Name="actInd"
+                             IsRunning="{Binding IsLoading}"
+                             IsVisible="{Binding IsLoading}" Color="Red"/>
+        <Label  x:Name="RESULTADO" Text=""
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"  />
+        <BoxView Color="Black" WidthRequest ="100" HeightRequest="1"/>
+        
+    </StackLayout>
+
+</ContentPage>
